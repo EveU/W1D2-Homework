@@ -58,11 +58,24 @@ def cube_volume(length)
 end
 
 def sphere_volume(r)
-  (4 * Math::PI * r**3) / 3
+  (4.0/3 * Math::PI * r**3)
 end
 
 def cylinder_volume(r, h)
   Math::PI * r**2 * h
+end
+
+def rect_prism_volume(w, l, h)
+  w*l*h
+end
+
+def cone_volume(r, h)
+  ((Math::PI * r**2 * h) / 3)
+end
+
+def capsule_volume(radius, side_length)
+  # πr2((4/3)r + a) -> formula for capsule volume
+  (Math::PI * radius**2 * ((4.0 / 3) * radius + side_length))
 end
 
 ##DATES

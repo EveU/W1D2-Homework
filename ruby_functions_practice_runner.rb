@@ -64,11 +64,20 @@ puts "The volume of cube 2, which has a length of 3, is #{cube_2}"
 
 ####Given the radius of a sphere calculate the volume
 sphere_1 = sphere_volume(5).round(1)
-puts "I expect sphere_1 to equal 523.6. sphere_1 = #{sphere_1}"
+puts "I expect the volume of sphere 1 to equal 523.6. It equals #{sphere_1}!"
 
 ####Can you extend this to calculate other shapes' volumes? (Cylinder, Rectangular Prism, Cone, Capsule)
 cylinder_1 = cylinder_volume(2, 3).round(1)
-puts "I expect cylinder 1, with a radius of 2 and a height of 3, to equal 37.7. It equals #{cylinder_1}"
+puts "I expect the volume of cylinder 1, (radius2, height3) to equal 37.7. It equals #{cylinder_1}!"
+
+rect_prism_1 = rect_prism_volume(2, 3, 6)
+puts "I expect the volume of rectangular prism 1, (w2, l3, h6), to equal 36. It equals #{rect_prism_1}!"
+
+cone_1 = cone_volume(2, 4).round(2)
+puts "I expect the volume of cone 1, (r2, h4), to equal 16.76. It equals #{cone_1}!"
+
+capsule_1 = capsule_volume(2, 5).round(1)
+puts "I expect the volume of capsule 1, (radius2, side_length5), to equal 96.3. It equals #{capsule_1}!"
 
 ####http://ruby-doc.org/stdlib-2.1.1/libdoc/date/rdoc/Date.html
 ####Days until christmas, Calculate how many nights there are from today until Christmas morning.
@@ -121,8 +130,6 @@ puts"What's your date of birth? (YYYY-MM-DD)"
 dob = Date.parse(gets.chomp)
 age = age_from_birthday_1(dob)
 puts "Your age is #{age}"
-
-
 
 
 
