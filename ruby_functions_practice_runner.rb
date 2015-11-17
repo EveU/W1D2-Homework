@@ -57,35 +57,18 @@ require_relative "./ruby_functions_practice"
 
 ####http://ruby-doc.org/core-2.1.4/Float.html
 ####Given the length of a side of a cube calculate the volume 
-# cube_1 = cube_volume(5)
-# cube_2 = cube_volume(3)
-# puts "The volume of cube 1, which has a length of 5, is #{cube_1}"
-# puts "The volume of cube 2, which has a length of 3, is #{cube_2}"
-
-puts "What is the length of your cube?"
-cube_length = gets.chomp.to_i
-your_cube_volume = cube_volume(cube_length)
-puts "Your cube has a volume of #{your_cube_volume}"
+cube_1 = cube_volume(5)
+cube_2 = cube_volume(3)
+puts "The volume of cube 1, which has a length of 5, is #{cube_1}"
+puts "The volume of cube 2, which has a length of 3, is #{cube_2}"
 
 ####Given the radius of a sphere calculate the volume
-# sphere_1 = sphere_volume(5).round(1)
-# puts "I expect sphere_1 to equal 523.6. sphere_1 = #{sphere_1}"
-
-puts "What is the radius of your sphere?"
-sphere_radius = gets.chomp.to_i
-your_sphere_volume = sphere_volume(sphere_radius)
-puts "Your sphere has a volume of #{your_sphere_volume}"
+sphere_1 = sphere_volume(5).round(1)
+puts "I expect sphere_1 to equal 523.6. sphere_1 = #{sphere_1}"
 
 ####Can you extend this to calculate other shapes' volumes? (Cylinder, Rectangular Prism, Cone, Capsule)
-# cylinder_1 = cylinder_volume(2, 3).round(1)
-# puts "I expect cylinder 1, with a radius of 2 and a height of 3, to equal 37.7. It equals #{cylinder_1}"
-
-puts "What is the radius of your cylinder?"
-cylinder_radius = gets.chomp.to_i
-puts "What is the height of your cylinder?"
-cylinder_height = gets.chomp.to_i
-your_cylinder_volume = cylinder_volume(cylinder_radius, cylinder_height)
-puts "Your cylinder has a volume of #{your_cylinder_volume}"
+cylinder_1 = cylinder_volume(2, 3).round(1)
+puts "I expect cylinder 1, with a radius of 2 and a height of 3, to equal 37.7. It equals #{cylinder_1}"
 
 ####http://ruby-doc.org/stdlib-2.1.1/libdoc/date/rdoc/Date.html
 ####Days until christmas, Calculate how many nights there are from today until Christmas morning.
@@ -94,14 +77,36 @@ days_to_new_year = days_to_event(2015, 12, 31)
 puts "There are #{sleeps_to_santa} sleeps until Santa's been!"
 puts "It's New Year in #{days_to_new_year} days"
 
+####Given a date of birth, calculate how old a person born on that date would be
+age = age_from_birthday(2003, 8, 12)
+puts "The age of the person is #{age}"
+
+
+#### Create a command line interface using put, gets to interact with the your functions 
+
+##SHAPES
+puts "What is the length of your cube?"
+cube_length = gets.chomp.to_i
+your_cube_volume = cube_volume(cube_length)
+puts "Your cube has a volume of #{your_cube_volume}"
+
+puts "What is the radius of your sphere?"
+sphere_radius = gets.chomp.to_i
+your_sphere_volume = sphere_volume(sphere_radius)
+puts "Your sphere has a volume of #{your_sphere_volume}"
+
+puts "What is the radius of your cylinder?"
+cylinder_radius = gets.chomp.to_i
+puts "What is the height of your cylinder?"
+cylinder_height = gets.chomp.to_i
+your_cylinder_volume = cylinder_volume(cylinder_radius, cylinder_height)
+puts "Your cylinder has a volume of #{your_cylinder_volume}"
+
+##DATES
 puts "When is the event you are counting down to? (YYYY-MM-DD)"
 your_event = Date.parse(gets.chomp)
 days_to_your_event = days_to_event_2(your_event)
 puts "Your event is in #{days_to_your_event} days!"
-
-####Given a date of birth, calculate how old a person born on that date would be
-# age = age_from_birthday(2003, 8, 12)
-# puts "The age of the person is #{age}"
 
 # puts"What's your date of birth? (YYYY MM DD)"
 # dob = gets.chomp.split
@@ -114,15 +119,8 @@ puts "Your event is in #{days_to_your_event} days!"
 
 puts"What's your date of birth? (YYYY-MM-DD)"
 dob = Date.parse(gets.chomp)
-age = age_from_birthday(dob)
+age = age_from_birthday_1(dob)
 puts "Your age is #{age}"
-
-#### Create a command line interface using put, gets to interact with the your functions 
-
-
-
-
-
 
 
 
