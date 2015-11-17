@@ -64,8 +64,11 @@ def days_to_event(year, month, day)
   (event_date - Date.today).to_i
 end
 
-def age_from_birthday(year, month, day)
-  birthday = Date.new(year, month, day)
-  ((Date.today - birthday).to_i) / 365
+def days_to_event_2(event_date)
+  (event_date - Date.today).to_i
+end
+
+def age_from_birthday(dob)
+   ((Date.today - dob).to_i) / 365
 end
 
